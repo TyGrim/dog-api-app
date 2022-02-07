@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive, Arial, Helvetica, sans-serif;
+}
+
+.App {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 10% 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "controls"
+    "gallery";
+  background-color: #303030e0;
+  color: white;
+  word-spacing: 1.5px;
+  letter-spacing: 1.5px;
+}
+
+h1 {
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-size: 25px;
+  // align-items: center;
+}
+
+.Controls {
+  display: flex;
+  grid-area: "controls";
+  background-color: rgb(48, 24, 46);
+  color: black;
+  flex-direction: column;
+  justify-content: center;
+  // align-content: center;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button {
+  color: black;
+  font-size: large;
+  padding: 10px 10px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  cursor: pointer;
+}
