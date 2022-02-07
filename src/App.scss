@@ -27,7 +27,6 @@ h1 {
   justify-content: center;
   margin-bottom: 10px;
   font-size: 35px;
-  // align-items: center;
 }
 
 .Controls {
@@ -44,6 +43,7 @@ form {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 button {
   color: black;

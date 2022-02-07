@@ -1,12 +1,5 @@
-// import React from "react"; //imported react with useState
 import React, { useState } from "react";
 import "./App.scss";
-
-//setup clickhander / set and track count/totalcount
-// get/add images (fetch/push in [])
-// set/display images (url)
-// if count is negative remove images from end (pop or slice)
-// show loading until image populates
 
 function ImageBox({ imageUrl }) {
   console.log(imageUrl);
