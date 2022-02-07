@@ -9,7 +9,12 @@ import "./App.scss";
 // show loading until image populates
 
 function ImageBox({ imageUrl }) {
-  return <div className="ImageBox"></div>;
+  console.log(imageUrl);
+  return (
+    <div className="ImageBox">
+      <img src={imageUrl} alt="Dog" />
+    </div>
+  );
 }
 
 function App() {
@@ -22,13 +27,15 @@ function App() {
     if (count === 5) {
       baseUrl += "/5";
     }
-    const result = await fetch(baseUrl);
-    const dogUrls = await result.json();
-    console.log(dogUrls);
-
     if (count > 0) {
-      for (let i = 0; i < totalCount; i++) {
-        newImageUrls.push("");
+      const result = await fetch(baseUrl);
+      const returnVal = await result.json();
+      const dogUrls = returnVal.message;
+
+      if (Array.isArray(dogUrls)) {
+        dogUrls.forEach((url) => newImageUrls.push(url));
+      } else {
+        newImageUrls.push(dogUrls);
       }
     }
 
@@ -60,11 +67,9 @@ function App() {
         </form>
       </section>
       <section className="Gallery">
-        <div className="ImageBox"></div>
-        <div className="ImageBox"></div>
-        <div className="ImageBox"></div>
-        <div className="ImageBox"></div>
-        <div className="ImageBox"></div>
+        {imageUrls.map((imageUrl, i) => (
+          <ImageBox key={i} imageUrl={imageUrl} />
+        ))}
       </section>
     </div>
   );
