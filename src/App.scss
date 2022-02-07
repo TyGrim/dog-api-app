@@ -55,3 +55,17 @@ button {
   border-radius: 10px;
   cursor: pointer;
 }
+
+.Gallery {
+  grid-area: "gallery";
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 25px;
+}
+
+.ImageBox {
+  height: 150px;
+  width: 150px;
+  background-color: white;
+}
