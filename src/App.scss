@@ -10,7 +10,7 @@
 .App {
   height: 100vh;
   display: grid;
-  grid-template-rows: 10% 1fr;
+  grid-template-rows: 20% 1fr;
   grid-template-columns: 1fr;
   grid-template-areas:
     "controls"
@@ -26,7 +26,7 @@ h1 {
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
-  font-size: 25px;
+  font-size: 35px;
   // align-items: center;
 }
 
@@ -37,7 +37,7 @@ h1 {
   color: black;
   flex-direction: column;
   justify-content: center;
-  // align-content: center;
+  align-content: center;
 }
 
 form {
@@ -45,7 +45,6 @@ form {
   display: flex;
   justify-content: space-evenly;
 }
-
 button {
   color: black;
   font-size: large;
@@ -62,10 +61,17 @@ button {
   justify-content: center;
   gap: 15px;
   padding: 25px;
+  flex-wrap: wrap;
 }
 
 .ImageBox {
-  height: 150px;
-  width: 150px;
-  background-color: white;
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background-color: #303030e0;
+}
+
+img {
+  width: 200px;
+  height: 200px;
 }
