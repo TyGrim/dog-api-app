@@ -19,6 +19,7 @@
   color: white;
   word-spacing: 1.5px;
   letter-spacing: 1.5px;
+  overflow: auto;
 }
 
 h1 {
@@ -69,9 +70,23 @@ button {
   height: 200px;
   width: 200px;
   background-color: #303030e0;
+  z-index: 1;
 }
 
 img {
   width: 200px;
   height: 200px;
+}
+
+.loader {
+  font-family: sans-serif;
+  font-size: 25px;
+  position: absolute;
+  top: 75px;
+  left: 50px;
+  z-index: -1;
+}
+
+.counter {
+  margin-left: 15px;
 }

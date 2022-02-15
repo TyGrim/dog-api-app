@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./App.scss";
 
 function ImageBox({ imageUrl }) {
-  console.log(imageUrl);
   return (
     <div className="ImageBox">
       <img src={imageUrl} alt="Dog" />
+      <div className="loader">...loading</div>
     </div>
   );
 }
@@ -37,13 +37,18 @@ function App() {
         newImageUrls.pop();
       }
     }
+
+    document.querySelector(".counter").textContent = newImageUrls.length; //display counter
+
     setImageUrls(newImageUrls);
   }
 
   return (
     <div className="App">
       <section className="Controls">
-        <h1>Who let the Dogs out?</h1>
+        <h1>
+          Who let the Dogs out?<span className="counter"></span>
+        </h1>
         <form>
           <button type="button" onClick={() => clickHandler(1)}>
             +1
